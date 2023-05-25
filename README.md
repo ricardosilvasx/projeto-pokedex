@@ -6,6 +6,7 @@ Este é um projeto de uma Pokédex simples, desenvolvida utilizando HTML, CSS e 
 
 - Exibição da lista de Pokémon com seus nomes, números, imagens, tipos e descrições.
 - Ajuste de tema: O projeto possui um botão para alternar entre os temas claro e escuro.
+- Pesquisa por nome de Pokémon para encontrar informações específicas.
 
 ## Como usar
 
