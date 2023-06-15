@@ -13,13 +13,13 @@
     gap: 15px;
     border-radius: 15px;
     padding: 15px;
-    transition: 0.2s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 .cartao-pokemon:hover{
     background-color: #96e9e6;
 }
 .modo-escuro .cartao-pokemon{
-    background-color: #a8a8a8;
+    background-color: #5f5d5d;
 }
 .informacoes{
     display: flex;
@@ -31,7 +31,6 @@
     padding: 5px;
     text-transform: uppercase;
     font-size: 17px;   
-    font-weight: 700;
 }
 .cartao-pokemon__gif{
     width: 90px;
