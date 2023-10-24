@@ -63,16 +63,6 @@ main {
     transition: width 1s ease-in;
 }
 
-.img-som{
-    width: 25px;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-   
-}
-
-.img-som:hover{
-    transform: scale(1.05);
-}
 .botao{
  background-color: transparent;
  border: none;
