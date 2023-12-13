@@ -1,19 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
     const pokedex = document.getElementById("listaPokemon");
-    const apiUrl = "https://pokeapi.co/api/v2/pokemon?limit=151"; // 151 Pokémon
+    const apiUrl = "https://pokeapi.co/api/v2/pokemon?limit=350"; // 151 Pokémon
 
     fetch(apiUrl)
         .then((response) => response.json())
         .then((data) => {
             const pokemonList = data.results;
 
-            pokemonList.forEach((pokemon, index) => {
+            pokemonList.forEach((pokemon, id) => {
                 const pokemonUrl = pokemon.url;
                 fetch(pokemonUrl)
                     .then((response) => response.json())
                     .then((pokemonData) => {
                         const pokemonInfo = {
-                            number: index + 1,
+                            number: id + 1,
                             name: pokemonData.name,
                             type: pokemonData.types[0].type.name,
                             types: pokemonData.types.map((type) => type.type.name),
@@ -36,10 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li class=" cartao-pokemon pokemon ${pokemon.type}">
+        <li class=" cartao-pokemon pokemon types ${pokemon.type}">
             <div class="informacoes">
                 <span class=" name">${pokemon.name}</span>
-                <span class=" number">#${pokemon.number}</span>               
+                <span class=" number">${pokemon.number}</span>               
             </div>
             <img src="${pokemon.photo}" class="pokemon-imagem" alt="${pokemon.name}">
             
